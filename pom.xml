@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.1.0</version>
 	
 	<name>maven-web-application</name>
 
@@ -21,16 +21,30 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
-		<sonar.host.url>http://18.138.81.149:9000/</sonar.host.url>
-		<sonar.login>admin</sonar.login>
-		<sonar.password>passw0rd</sonar.password> 
+		<sonar.host.url>http://65.2.9.5:9000/</sonar.host.url>
+		<sonar.login>squ_fc885e22f7a1fc5367391c3d9cdb5038cb28bd59</sonar.login>
+		<!-- <sonar.password>12345</sonar.password> --> 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
+       <repositories>
+               <repository>
+                    <id>nexus</id>
+                     <url>http://35.154.133.181:9000/omai/repository/mss-proxy-repo/</url>
+	     </repository>
+       </repositories>
 
 	<dependencies>
-		
+	
+	      <!--
+		<dependency>
+                        <groupId>com.mt</groupId>
+                        <artifactId>jenkins</artifactId>
+                        <version>1.1.0</version>
+                        <type>war</type>
+               </dependency>
+	     -->
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
@@ -97,14 +111,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-release/</url>
+	      <name>omaibank release nexus repository</name>
+	      <url>http://43.205.203.64:9000/omai/repository/omaibank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://54.255.174.111:8081/repository/flipkart-snapshot/</url>
+	      <name>omaibank Snapshot Nexus Repository </name>
+	      <url>http://43.205.203.64:9000/omai/repository/omaibank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
